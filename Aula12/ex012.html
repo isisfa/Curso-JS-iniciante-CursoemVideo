@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horário</title>
+</head>
+<body>
+    <h1>Sistema de Horários</h1>
+    <div id = "hora">
+    </div>
+    <script>
+
+        var agora = new Date()
+        var hora = agora.getHours()
+        var horas = document.querySelector('div#hora')
+        horas.innerHTML = (`<p>Agora são exatamente ${hora} horas.</p>  `)
+        
+        if (hora < 12) {
+        horas.innerHTML += ('Bom dia!')
+        } else if (horas <18) {
+        horas.innerHTML += ('Boa tarde!')
+        } else {
+        horas.innerHTML += ('Boa noite!')
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOMEWORK Teste de Condições</title>
+</head>
+<body>
+    <h1>Digite seu País de nascimento:</h1>
+    País: <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="ok" onclick="calcularpais()">
+    <div id = "resp">
+
+    </div>
+    <script>
+        function calcularpais() {
+            var txtpais = window.document.querySelector('input#txtpais')
+            var resp = window.document.querySelector('div#resp')
+            var pais = String(txtpais.value)
+            resp.innerHTML = `<p>Vivendo em <strong> ${pais}</strong>.</p>`
+            if (pais == 'Brasil') {
+                resp.innerHTML += 'Você é Brasileiro!'
+            } else {
+                resp.innerHTML += 'Você é Estrangeiro!'
+            }
+        }
+    </script>
+</body>   
+</html>

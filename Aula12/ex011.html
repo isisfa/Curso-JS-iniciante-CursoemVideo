@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idade para Votação</title>
+</head>
+<body>
+    <h1>Idade para votação</h1>
+    Idade:  <input type="number" name="idade" id="txtidade">
+            <input type="button" value="ok" onclick="calcularidade()">
+    <div id = "resp">
+        
+    </div>
+
+    <script>
+        function calcularidade() {
+
+            var txtidade = window.document.querySelector('input#txtidade')
+            var resp = window.document.querySelector('div#resp')
+            var idade = Number(txtidade.value)
+            resp.innerHTML = (`<p>Você tem <strong> ${idade} </strong> anos.</p>`)
+             if (idade < 16){
+            resp.innerHTML += ('Não vota.')
+             } else if (idade < 18 || idade > 65){
+            resp.innerHTML += ('Voto opcional.')
+             } else {
+            resp.innerHTML += ('Voto obrigatório.')
+             }
+        }
+
+    </script>
+</body>
+</html>
